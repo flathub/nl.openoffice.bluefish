@@ -1,7 +1,7 @@
 {
     "app-id": "nl.openoffice.bluefish",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.24",
+    "runtime-version": "3.30",
     "sdk": "org.gnome.Sdk",
     "command": "bluefish",
     "rename-icon": "bluefish",
@@ -11,7 +11,12 @@
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
-        "--share=network"
+        "--share=network",
+        "--filesystem=home",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
     "build-options" : {
         "cflags": "-O2 -g",
