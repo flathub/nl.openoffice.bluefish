@@ -1,0 +1,12 @@
+--- a/desktop-data/bluefish.appdata.xml.in	2017-05-06 19:55:42.000000000 +0200
++++ b/desktop-data/bluefish.appdata.xml.in	2020-01-26 12:46:58.209705491 +0100
+@@ -33,4 +33,9 @@
+ <kudo>HiDpiIcon</kudo>
+ <kudo>ModernToolkit</kudo>
+ </kudos>
++<content_rating type="oars-1.0" />
++<releases>
++	<release version="2.2.11" date="2017-01-27" />
++	<release version="2.2.10" date="2020-01-24" />
++</releases>
+ </application>
