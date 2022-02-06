@@ -31,6 +31,10 @@
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "bluefish",
+            "post-install": [
+                "mv ${FLATPAK_DEST}/share/mime/packages/bluefish.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
+                "cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done"
+            ],
             "sources": [
                 {
                     "type": "archive",
