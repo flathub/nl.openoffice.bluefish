@@ -1,7 +1,7 @@
 {
     "app-id": "nl.openoffice.bluefish",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "bluefish",
     "rename-icon": "bluefish",
@@ -14,20 +14,31 @@
         "--share=network",
         "--filesystem=home"
     ],
-    "cleanup": ["/include", "/lib/pkgconfig",
-                "/share/pkgconfig", "/share/aclocal",
-                "/man", "/share/man", "*.la", "*.a",
-                "/share/info", "/share/doc"
+  "cleanup": [
+      "/include",
+      "/lib/pkgconfig",
+      "/share/pkgconfig",
+      "/share/aclocal",
+      "/man",
+      "/share/man",
+      "*.la",
+      "*.a",
+      "/share/info",
+      "/share/doc"
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "bluefish",
+            "post-install": [
+                "mv ${FLATPAK_DEST}/share/mime/packages/bluefish.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
+                "cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.11.tar.gz",
-                    "sha256": "5d4c26365880debe7872c2139a755ee4e45ad74c7aca17c955423282d171f328"
+                    "url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.12.tar.bz2",
+                    "sha1": "2a9473b08c464a38b63cb68ac3bc8e5624bc29fc"
                 },
                 {
                     "type": "patch",
