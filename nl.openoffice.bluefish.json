@@ -4,7 +4,6 @@
     "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "bluefish",
-    "appstream-compose": false,
     "rename-icon": "bluefish",
     "rename-appdata-file": "bluefish.appdata.xml",
     "rename-desktop-file": "bluefish.desktop",
