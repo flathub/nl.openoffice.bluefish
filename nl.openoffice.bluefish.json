@@ -1,7 +1,7 @@
 {
     "app-id": "nl.openoffice.bluefish",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "41",
     "sdk": "org.gnome.Sdk",
     "command": "bluefish",
     "appstream-compose": false,
@@ -15,10 +15,17 @@
         "--share=network",
         "--filesystem=home"
     ],
-    "cleanup": ["/include", "/lib/pkgconfig",
-                "/share/pkgconfig", "/share/aclocal",
-                "/man", "/share/man", "*.la", "*.a",
-                "/share/info", "/share/doc"
+  "cleanup": [
+      "/include",
+      "/lib/pkgconfig",
+      "/share/pkgconfig",
+      "/share/aclocal",
+      "/man",
+      "/share/man",
+      "*.la",
+      "*.a",
+      "/share/info",
+      "/share/doc"
     ],
     "modules": [
         "shared-modules/intltool/intltool-0.51.json",
@@ -29,6 +36,10 @@
                     "type": "archive",
                     "url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.12.tar.bz2",
                     "sha1": "2a9473b08c464a38b63cb68ac3bc8e5624bc29fc"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata_release_oars.patch"
                 }
             ]
         }
