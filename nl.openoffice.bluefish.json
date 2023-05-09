@@ -1,50 +1,84 @@
 {
-    "app-id": "nl.openoffice.bluefish",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
-    "sdk": "org.gnome.Sdk",
-    "command": "bluefish",
-    "rename-icon": "bluefish",
-    "rename-appdata-file": "bluefish.appdata.xml",
-    "rename-desktop-file": "bluefish.desktop",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--share=network",
-        "--filesystem=home"
-    ],
-  "cleanup": [
-      "/include",
-      "/lib/pkgconfig",
-      "/share/pkgconfig",
-      "/share/aclocal",
-      "/man",
-      "/share/man",
-      "*.la",
-      "*.a",
-      "/share/info",
-      "/share/doc"
-    ],
-    "modules": [
-        "shared-modules/intltool/intltool-0.51.json",
-        {
-            "name": "bluefish",
-            "post-install": [
-                "mv ${FLATPAK_DEST}/share/mime/packages/bluefish.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
-                "cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.12.tar.bz2",
-                    "sha1": "2a9473b08c464a38b63cb68ac3bc8e5624bc29fc"
-                },
-                {
-                    "type": "patch",
-                    "path": "appdata_release_oars.patch"
-                }
-            ]
-        }
-    ]
+	"app-id": "nl.openoffice.bluefish",
+	"runtime": "org.gnome.Platform",
+	"runtime-version": "44",
+	"sdk": "org.gnome.Sdk",
+	"command": "bluefish",
+	"rename-icon": "bluefish",
+	"rename-appdata-file": "bluefish.appdata.xml",
+	"rename-desktop-file": "bluefish.desktop",
+	"finish-args": [
+		"--share=ipc",
+		"--socket=x11",
+		"--socket=wayland",
+		"--share=network",
+		"--filesystem=host"
+	],
+	"cleanup": [
+		"/include",
+		"/lib/pkgconfig",
+		"/share/pkgconfig",
+		"/share/aclocal",
+		"/man",
+		"/share/man",
+		"*.la",
+		"*.a",
+		"/share/info",
+		"/share/doc"
+	],
+	"modules": [
+		{
+				"name": "bluefish",
+				"buildsystem": "autotools",
+				"post-install": [
+					"mv ${FLATPAK_DEST}/share/mime/packages/bluefish.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
+					"cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done"
+				],
+				"sources": [
+						{
+							"type": "archive",
+							"url": "https://www.bennewitz.com/bluefish/devel/source/bluefish-2.2.14beta.tar.bz2",
+							"sha256": "6439859e83542f05bc8655203ee8210ec40a7d1747b6c1315a16a96c2d9bcab1"
+						}
+				],
+				"modules": [
+					{
+						"name": "gucharmap",
+						"buildsystem": "meson",
+						"config-opts": [
+							"-Ducd_path=/app/share/unicode"
+						],
+						"sources": [
+								{
+									"type": "archive",
+									"url": "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.2/gucharmap-15.0.2.tar.gz",
+									"sha256": "4224479485c137959b9076143a71a22f96946678551f1836592d69d070c47a2d"
+								}
+						],
+						"modules": [
+							{
+								"name": "unicode-character-database",
+								"buildsystem": "simple",
+								"build-commands": [
+									"install -Dm644 {UCD,Unihan}.zip -t /app/share/unicode/",
+									"unzip -d /app/share/unicode Unihan.zip",
+									"unzip -d /app/share/unicode UCD.zip"
+								],
+								"sources": [{
+									"type": "file",
+									"url": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
+									"sha256": "5fbde400f3e687d25cc9b0a8d30d7619e76cb2f4c3e85ba9df8ec1312cb6718c"
+								}, {
+									"type": "file",
+									"url": "https://www.unicode.org/Public/zipped/15.0.0/Unihan.zip",
+									"sha256": "24b154691fc97cb44267b925d62064297086b3f896b57a8181c7b6d42702a026"
+								}
+								],
+								"cleanup": ["*"]
+							}
+						]
+					}
+				]
+		}
+	]
 }
