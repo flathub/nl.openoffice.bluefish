@@ -37,8 +37,8 @@
 				"sources": [
 						{
 							"type": "archive",
-							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.15.tar.bz2",
-							"sha256": "6143e51c6b5579d596f3a9a85e0f0d8580c9f58f828575b119880e0ca1d941bc"
+							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.15fp.tar.bz2",
+							"sha256": "5d94775324f600e559d9b3632ddb562e097167d47c162fde92a07a78cbc35826"
 						}
 				],
 				"modules": [
