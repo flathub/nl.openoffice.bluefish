@@ -38,7 +38,7 @@
 						{
 							"type": "archive",
 							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.16.tar.bz2",
-							"sha256": "31957e33db60722802e71779c275d9ec78f1bfddcdb860c8cce118c682b73e6f"
+							"sha256": "14e6476fcee8fa326f7f63f1f693d252195f9dcb16af0fe3c915c499baf5dd74"
 						}
 				],
 				"modules": [
