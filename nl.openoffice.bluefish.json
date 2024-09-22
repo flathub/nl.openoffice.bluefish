@@ -1,7 +1,7 @@
 {
 	"app-id": "nl.openoffice.bluefish",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "46",
+	"runtime-version": "45",
 	"sdk": "org.gnome.Sdk",
 	"command": "bluefish",
 	"rename-icon": "bluefish",
@@ -37,8 +37,8 @@
 				"sources": [
 						{
 							"type": "archive",
-							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.15fp.tar.bz2",
-							"sha256": "5d94775324f600e559d9b3632ddb562e097167d47c162fde92a07a78cbc35826"
+							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.16.tar.bz2",
+							"sha256": "14e6476fcee8fa326f7f63f1f693d252195f9dcb16af0fe3c915c499baf5dd74"
 						}
 				],
 				"modules": [
