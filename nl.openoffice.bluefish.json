@@ -1,7 +1,7 @@
 {
 	"app-id": "nl.openoffice.bluefish",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "47",
+	"runtime-version": "49",
 	"sdk": "org.gnome.Sdk",
 	"command": "bluefish",
 	"rename-icon": "bluefish",
@@ -37,8 +37,8 @@
 				"sources": [
 						{
 							"type": "archive",
-							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.16.tar.bz2",
-							"sha256": "14e6476fcee8fa326f7f63f1f693d252195f9dcb16af0fe3c915c499baf5dd74"
+							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.2.17.tar.bz2",
+							"sha256": "3a79f6425e14939ea134f96c1424e3aac05bee95904be434581883078a7b7253"
 						}
 				],
 				"modules": [
@@ -51,8 +51,8 @@
 						"sources": [
 								{
 									"type": "archive",
-									"url": "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.2/gucharmap-15.0.2.tar.gz",
-									"sha256": "4224479485c137959b9076143a71a22f96946678551f1836592d69d070c47a2d"
+									"url": "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/16.0.2/gucharmap-16.0.2.tar.gz",
+									"sha256": "200b0dd3276290e2d442f7ce71b9ca5dd79a0b07099f3e6b02d9b493e08ba303"
 								}
 						],
 						"modules": [
@@ -66,12 +66,12 @@
 								],
 								"sources": [{
 									"type": "file",
-									"url": "https://www.unicode.org/Public/zipped/15.0.0/UCD.zip",
-									"sha256": "5fbde400f3e687d25cc9b0a8d30d7619e76cb2f4c3e85ba9df8ec1312cb6718c"
+									"url": "https://www.unicode.org/Public/zipped/16.0.0/UCD.zip",
+									"sha256": "c86dd81f2b14a43b0cc064aa5f89aa7241386801e35c59c7984e579832634eb2"
 								}, {
 									"type": "file",
-									"url": "https://www.unicode.org/Public/zipped/15.0.0/Unihan.zip",
-									"sha256": "24b154691fc97cb44267b925d62064297086b3f896b57a8181c7b6d42702a026"
+									"url": "https://www.unicode.org/Public/zipped/16.0.0/Unihan.zip",
+									"sha256": "b8f000df69de7828d21326a2ffea462b04bc7560022989f7cc704f10521ef3e0"
 								}
 								],
 								"cleanup": ["*"]
