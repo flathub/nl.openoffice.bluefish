@@ -50,9 +50,9 @@
 						],
 						"sources": [
 								{
-									"type": "archive",
-									"url": "https://gitlab.gnome.org/api/v4/projects/1701/packages/generic/gucharmap/17.0.0/gucharmap-17.0.0.tar.xz",
-									"sha256": "089e7527f832891e00bb72f432503d37a01272211f52a0c50fa6a6c37cf7a9e1"
+								"type": "archive",
+								"url": "https://gitlab.gnome.org/GNOME/gucharmap/-/archive/15.0.2/gucharmap-15.0.2.tar.gz",
+								"sha256": "4224479485c137959b9076143a71a22f96946678551f1836592d69d070c47a2d"
 								}
 						],
 						"modules": [
