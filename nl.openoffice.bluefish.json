@@ -51,7 +51,7 @@
 						"sources": [
 								{
 									"type": "archive",
-									"url": "https://gitlab.gnome.org/GNOME/gucharmap/-/package_files/1274/download",
+									"url": "https://download.gnome.org/sources/gucharmap/17.0/gucharmap-17.0.1.tar.xz",
 									"sha256": "f9844a2895b2dcea1ae39f295232934ec9fa9983624fa3e96652e1332bedd169"
 								}
 						],
