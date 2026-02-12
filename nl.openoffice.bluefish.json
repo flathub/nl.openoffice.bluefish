@@ -16,15 +16,19 @@
 	],
 	"cleanup": [
 		"/include",
+		"/lib/girepository-1.0",
 		"/lib/pkgconfig",
-		"/share/pkgconfig",
-		"/share/aclocal",
 		"/man",
-		"/share/man",
-		"*.la",
-		"*.a",
+		"/share/aclocal",
+		"/share/doc",
+		"/share/gir-1.0",
+		"/share/gtk-doc",
 		"/share/info",
-		"/share/doc"
+		"/share/man",
+		"/share/pkgconfig",
+		"/share/vala",
+		"*.la",
+		"*.a"
 	],
 	"modules": [
 		{
