@@ -41,8 +41,8 @@
 				"sources": [
 						{
 							"type": "archive",
-							"url": "https://www.bennewitz.com/bluefish/devel/source/bluefish-2.4.1.tar.bz2",
-							"sha256": "974f9f5135fedb293996b0f72175e04f41e1f5307183412ffa89e293ba8ac0cf"
+							"url": "https://www.bennewitz.com/bluefish/stable/source/bluefish-2.4.1.tar.bz2",
+							"sha256": "540b0e4f5a595fc418c41125a6a282b69f10cf01513bedde80906d25a56d0cc9"
 						}
 				],
 				"modules": [
