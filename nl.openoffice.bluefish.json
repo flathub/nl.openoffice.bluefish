@@ -1,7 +1,7 @@
 {
 	"app-id": "nl.openoffice.bluefish",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "48",
+	"runtime-version": "50",
 	"sdk": "org.gnome.Sdk",
 	"command": "bluefish",
 	"rename-icon": "bluefish",
@@ -18,17 +18,11 @@
 		"/include",
 		"/lib/girepository-1.0",
 		"/lib/pkgconfig",
-		"/man",
-		"/share/aclocal",
 		"/share/doc",
 		"/share/gir-1.0",
 		"/share/gtk-doc",
-		"/share/info",
 		"/share/man",
-		"/share/pkgconfig",
-		"/share/vala",
-		"*.la",
-		"*.a"
+		"/share/vala"
 	],
 	"modules": [
 		{
